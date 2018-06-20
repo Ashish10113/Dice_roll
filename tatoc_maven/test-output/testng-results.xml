@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18814" started-at="2018-06-20T06:36:20Z" finished-at="2018-06-20T06:36:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18814" started-at="2018-06-20T06:36:20Z" finished-at="2018-06-20T06:36:38Z">
+      <class name="com.qait.automation.tatoc_maven.test">
+        <test-method status="PASS" signature="initvars()[pri:0, instance:com.qait.automation.tatoc_maven.test@735b5592]" name="initvars" is-config="true" duration-ms="7532" started-at="2018-06-20T12:06:20Z" finished-at="2018-06-20T12:06:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initvars -->
+        <test-method status="PASS" signature="first_page_test()[pri:0, instance:com.qait.automation.tatoc_maven.test@735b5592]" name="first_page_test" duration-ms="7136" started-at="2018-06-20T12:06:27Z" finished-at="2018-06-20T12:06:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- first_page_test -->
+        <test-method status="PASS" signature="second_page()[pri:0, instance:com.qait.automation.tatoc_maven.test@735b5592]" name="second_page" duration-ms="1146" started-at="2018-06-20T12:06:34Z" depends-on-methods="com.qait.automation.tatoc_maven.test.first_page_test" finished-at="2018-06-20T12:06:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- second_page -->
+        <test-method status="PASS" signature="third_page()[pri:0, instance:com.qait.automation.tatoc_maven.test@735b5592]" name="third_page" duration-ms="335" started-at="2018-06-20T12:06:35Z" depends-on-methods="com.qait.automation.tatoc_maven.test.second_page" finished-at="2018-06-20T12:06:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- third_page -->
+        <test-method status="PASS" signature="fourth_page()[pri:0, instance:com.qait.automation.tatoc_maven.test@735b5592]" name="fourth_page" duration-ms="1714" started-at="2018-06-20T12:06:36Z" depends-on-methods="com.qait.automation.tatoc_maven.test.third_page" finished-at="2018-06-20T12:06:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fourth_page -->
+        <test-method status="PASS" signature="fifth_page()[pri:0, instance:com.qait.automation.tatoc_maven.test@735b5592]" name="fifth_page" duration-ms="302" started-at="2018-06-20T12:06:37Z" depends-on-methods="com.qait.automation.tatoc_maven.test.fourth_page" finished-at="2018-06-20T12:06:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fifth_page -->
+        <test-method status="PASS" signature="exit()[pri:0, instance:com.qait.automation.tatoc_maven.test@735b5592]" name="exit" is-config="true" duration-ms="626" started-at="2018-06-20T12:06:38Z" finished-at="2018-06-20T12:06:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exit -->
+      </class> <!-- com.qait.automation.tatoc_maven.test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

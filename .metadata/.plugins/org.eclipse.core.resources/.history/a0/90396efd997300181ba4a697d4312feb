@@ -1,0 +1,10 @@
+package com.qait.automation.tatoc_maven;
+
+public class test {
+	
+	
+	@Test
+	public void test1{
+		
+	}
+}

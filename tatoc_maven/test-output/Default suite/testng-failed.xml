@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.qait.automation.tatoc_maven.test">
+        <methods>
+          <include name="exit"/>
+          <include name="fifth_page"/>
+          <include name="initvars"/>
+          <include name="fourth_page"/>
+          <include name="first_page_test"/>
+          <include name="second_page"/>
+          <include name="third_page"/>
+        </methods>
+      </class> <!-- com.qait.automation.tatoc_maven.test -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

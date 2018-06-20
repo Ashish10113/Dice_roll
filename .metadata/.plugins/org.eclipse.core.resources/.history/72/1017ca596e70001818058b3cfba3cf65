@@ -1,0 +1,15 @@
+package test;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+class test2 {
+
+	@Test
+	void test() {
+		WebDriver driver = new ChromeDriver();
+		 driver.get("https://www.bing.com");
+	}
+
+}

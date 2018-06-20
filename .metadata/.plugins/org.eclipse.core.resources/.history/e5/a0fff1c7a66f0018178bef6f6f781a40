@@ -1,0 +1,27 @@
+import java.util.Random;
+public class DiceRoll {
+
+	public  void random() 
+	{
+		int new_num=0;
+		int side=get_no_of_side();
+		System.out.println("Hello");
+		Random ra=new Random();
+	     new_num=ra.nextInt(6);
+	     new_num=new_num+1;
+	System.out.println(new_num);
+	System.out.println(side);
+	}
+	
+	public int get_no_of_side()
+	{
+		int no_of_side;
+		System.out.println("Enter For Number Of Sides");
+		Scanner sc=new Scanner(Sysytem.in)
+		no_of_side=sc.nextInt();
+		return no_of_side;
+		
+	}
+	}
+
+}

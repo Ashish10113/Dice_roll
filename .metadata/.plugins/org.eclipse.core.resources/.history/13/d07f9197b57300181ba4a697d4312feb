@@ -1,0 +1,98 @@
+package com.qait.automation.tatoc_maven;
+
+import org.apache.http.impl.conn.SystemDefaultRoutePlanner;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+public class test {
+	
+	WebDriver driver = new ChromeDriver();
+	@Test
+	public void first_page_test(){
+		String s;
+		driver.get("http://10.0.1.86/tatoc");
+		WebElement element = driver.findElement(By.linkText("Basic Course"));
+		s=element.getAttribute("href");
+		System.out.println(s);
+		Assert.assertTrue(element.isDisplayed());
+		System.out.println(element.getText()+ " is displayed");
+		element.click();
+		WebElement f_page_check=driver.findElement(By.className("greenbox"));
+		Assert.assertTrue(f_page_check.isDisplayed());
+		f_page_check.click();
+		}
+	
+	@Test  (dependsOnMethods="first_page_test")
+	public void second_page()
+	{
+		String urll=driver.getCurrentUrl();
+		int flag=0;
+		 String first_box_color=new String();
+		  String second_box_color=new String();
+		driver.switchTo().frame(driver.findElement(By.id("main")));
+		WebElement first_box=driver.findElement(By.id("answer"));
+     		
+		first_box_color=first_box.getAttribute("class");
+		
+        System.out.println(urll);
+		driver.switchTo().frame(driver.findElement(By.id("child")));
+     WebElement second_box=driver.findElement(By.id("answer"));
+		second_box_color=second_box.getAttribute("class");
+		if(first_box_color.equals(second_box_color))
+		{
+		
+			driver.switchTo().defaultContent();	
+			driver.switchTo().frame("main");
+			WebElement proceed1 = driver.findElement(By.linkText("Proceed"));
+			proceed1.click();
+			
+		}
+		
+		while(flag==0)
+		{
+		if(first_box_color.equals(second_box_color))
+		{
+		
+		flag=1;
+		}
+		else
+		{
+			
+			
+			driver.switchTo().defaultContent();	
+			driver.switchTo().frame("main");	
+			WebElement element = driver.findElement(By.linkText("Repaint Box 2"));
+			element.click();
+			driver.switchTo().frame(driver.findElement(By.id("child")));
+			second_box=driver.findElement(By.id("answer"));
+		    second_box_color=second_box.getAttribute("class");
+			
+	}
+		}
+		driver.switchTo().defaultContent();	
+		driver.switchTo().frame("main");
+		System.out.println("success");
+		WebElement proceed = driver.findElement(By.linkText("Proceed"));
+		proceed.click();
+		
+}
+@Test (dependsOnMethods="second_method")
+public void third_page()
+{
+	Actions act=new Actions(driver);
+	WebElement element = driver.findElement(By.id("dropbox")); 
+
+	WebElement target = driver.findElement(By.id("dragbox"));
+
+	act.dragAndDrop(target, element).build().perform();
+	
+	WebElement link = driver.findElement(By.linkText("Proceed"));
+	link.click();
+	 
+}
+}

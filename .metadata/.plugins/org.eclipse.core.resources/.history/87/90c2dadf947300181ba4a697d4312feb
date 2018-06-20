@@ -1,0 +1,10 @@
+package com.qait.automation.tatoc_maven;
+
+import junit.framework.TestCase;
+
+public class first_page_maven extends TestCase
+{
+	
+	
+
+}

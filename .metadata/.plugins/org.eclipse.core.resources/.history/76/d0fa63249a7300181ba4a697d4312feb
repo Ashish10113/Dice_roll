@@ -1,0 +1,19 @@
+package com.qait.automation.tatoc_maven;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+public class test {
+	
+	
+	@Test
+	public void test1(){
+		driver.get("http://10.0.1.86/tatoc");
+
+		WebElement element = driver.findElement(By.linkText("Basic Course"));
+		element.click();
+		WebElement f_page_check=driver.findElement(By.className("greenbox"));
+		f_page_check.click();
+	}
+}

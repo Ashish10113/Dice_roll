@@ -1,0 +1,15 @@
+import java.util.Random;
+public class DiceRoll {
+
+	public static void main(String[] args) {
+		int new_num=0;
+		System.out.println("Hello");
+		Random ra=new Random();
+	     new_num=ra.nextInt(6);
+	     new_num=new_num+1;
+	System.out.println(new_num);
+	
+	
+	}
+
+}

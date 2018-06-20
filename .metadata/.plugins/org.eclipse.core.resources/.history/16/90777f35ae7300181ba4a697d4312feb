@@ -1,0 +1,24 @@
+package com.qait.automation.tatoc_maven;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class test {
+	
+	
+	@Test
+	public void first_page_test(){
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://10.0.1.86/tatocc");
+		WebElement element = driver.findElement(By.linkText("Basic Course"));
+		Assert.assertTrue(element.isDisplayed());
+		System.out.println(element.getText()+ " is displayed");
+		element.click();
+		WebElement f_page_check=driver.findElement(By.className("greenbox"));
+		f_page_check.click();
+	}
+}

@@ -1,0 +1,13 @@
+import java.Util.Random;
+public class DiceRoll {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Hello");
+		Random ra=new Random();
+int	new_num=ra.nextInt();	
+	System.out.println(ra);
+	
+	}
+
+}
